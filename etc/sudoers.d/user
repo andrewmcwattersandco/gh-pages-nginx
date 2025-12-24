@@ -1,0 +1,1 @@
+user ALL=(ALL) NOPASSWD: /bin/cp, /usr/sbin/nginx, /bin/systemctl, /usr/bin/certbot
