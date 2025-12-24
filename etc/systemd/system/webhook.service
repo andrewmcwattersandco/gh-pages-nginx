@@ -1,0 +1,9 @@
+[Unit]
+Description=Webhook server
+
+[Service]
+Type=exec
+ExecStart=webhook -hooks /home/user/gh-pages-nginx/hooks.json -verbose -template
+
+# Which user should the webhooks run as?
+User=user
