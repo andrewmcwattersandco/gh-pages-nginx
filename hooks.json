@@ -1,7 +1,7 @@
 [
   {
     "id": "redeploy-webhook",
-    "execute-command": "{{ getenv "HOME" }}/gh-pages-nginx/redeploy.sh",
+    "execute-command": "{{ getenv "HOME" }}/gh-pages-nginx/deploy.sh",
     "command-working-directory": "{{ getenv "HOME" }}/gh-pages-nginx"
   }
 ]
