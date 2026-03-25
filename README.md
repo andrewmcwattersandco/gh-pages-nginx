@@ -11,7 +11,8 @@ so that other locations on the same domain may be configured for other servers.
 Copy _username_.com.conf to `/etc/nginx/conf.d` and rename the configuration
 file to your domain.
 
-Update the `proxy_pass` directive URL in the configuration file to your
+Update `server_name`, `proxy_ssl_name`, `proxy_set_header Host`, and the
+`proxy_pass` URL in the `location /` block to your domain and
 **https://_username_.github.io** GitHub Pages URL.[^2]
 
 Add your own `location` blocks.[^3][^4]
