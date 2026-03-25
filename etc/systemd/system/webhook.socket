@@ -3,12 +3,12 @@ Description=Webhook server socket
 
 [Socket]
 # Listen on all network interfaces, port 9000
-ListenStream=9000
+# ListenStream=9000
 
 # Alternatives:
 
 ## Listen on one specific interface only
-# ListenStream=10.0.0.1:9000
+ListenStream=127.0.0.1:9000
 # FreeBind=true
 
 ## Listen on a Unix domain socket
