@@ -6,9 +6,6 @@ specifically for the use-case of pointing your index to a GitHub Pages website,
 so that other locations on the same domain may be configured for other servers.
 
 ## Installing
-```sh
-sudo cp -r etc/* /etc/
-```
 
 #### nginx
 Copy _username_.com.conf to `/etc/nginx/conf.d` and rename the configuration
@@ -20,7 +17,21 @@ Update the `proxy_pass` directive URL in the configuration file to your
 Add your own `location` blocks.[^3][^4]
 
 #### sudo
+```sh
+sudo cp -r etc/* /etc/
+```
+
 Rename `/etc/sudoers.d/user` to your username, replacing `user` with your actual
+username.
+
+#### nginx-deploy
+```sh
+sudo cp -r usr/* /usr/
+sudo chown root:root /usr/local/sbin/nginx-deploy
+sudo chmod 755 /usr/local/sbin/nginx-deploy
+```
+
+In `/etc/systemd/system/webhook.service`, replace `User=user` with your actual
 username.
 
 #### systemd[^5]
