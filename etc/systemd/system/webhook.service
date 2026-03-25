@@ -3,7 +3,7 @@ Description=Webhook server
 
 [Service]
 Type=exec
-ExecStart=webhook -hooks /home/user/gh-pages-nginx/hooks.json -verbose -template
+ExecStart=webhook -hooks %h/gh-pages-nginx/hooks.json -verbose -template
 
 # Which user should the webhooks run as?
 User=user
